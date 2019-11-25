@@ -31,6 +31,9 @@ public class Model {
     }
 
     public boolean checkInBoundaries(int approachNumber) {
+        if(approachNumber == 50) {
+            return true;
+        }
         return false;
     }
 
