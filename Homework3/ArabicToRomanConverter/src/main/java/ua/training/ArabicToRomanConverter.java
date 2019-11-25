@@ -7,6 +7,7 @@ public class ArabicToRomanConverter {
 
     public String convertArabicToRoman(int arabic) {
         LinkedHashMap<Integer, String> arabicRomanMap = new LinkedHashMap<Integer, String>();
+        arabicRomanMap.put(5, "V");
         arabicRomanMap.put(4, "IV");
         arabicRomanMap.put(1, "I");
 
