@@ -3,7 +3,6 @@ package ua.training;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.Assert;
-import static org.junit.Assert.fail;
 
 public class ModelTest {
     public static Model model;
@@ -61,6 +60,20 @@ public class ModelTest {
         Assert.assertTrue(model.checkInBoundaries(puzzledNumber));
     }
 
+    @Test
+    public void generatePuzzledNumber_10000Times() {
+        boolean true1000times = true;
 
+        for (int i=1;i<=10000;i++) {
+            model.generatePuzzledNumber();
+            int puzzledNumber = model.getPuzzledNumber();
 
+            if(!model.checkInBoundaries(puzzledNumber)) {
+                true1000times = false;
+                break;
+            }
+        }
+
+        Assert.assertTrue(true1000times);
+    }
 }
