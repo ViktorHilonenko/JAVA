@@ -22,4 +22,11 @@ public class ModelTest {
     public void checkInBoundaries_50_is_True() {
         Assert.assertTrue(model.checkInBoundaries(50));
     }
+
+    @Test
+    public void checkInBoundaries_25_is_True() {
+        Assert.assertTrue(model.checkInBoundaries(25));
+    }
+
+
 }
