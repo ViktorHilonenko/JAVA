@@ -3,9 +3,9 @@ package ua.training;
 public class ArabicToRomanConverter {
 
     public String convertArabicToRoman(int arabic) {
-        String roman = "";
+        String roman = "I";
 
-        return "";
+        return roman;
     }
 
 }
