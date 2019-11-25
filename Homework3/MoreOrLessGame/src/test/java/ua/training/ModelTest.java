@@ -14,11 +14,6 @@ public class ModelTest {
     }
 
     @Test
-    public void generatePuzzledNumber() {
-        fail();
-    }
-
-    @Test
     public void checkInBoundaries_50_is_True() {
         Assert.assertTrue(model.checkInBoundaries(50));
     }
@@ -56,6 +51,14 @@ public class ModelTest {
     @Test
     public void checkInBoundaries_99_is_True() {
         Assert.assertTrue(model.checkInBoundaries(99));
+    }
+
+    @Test
+    public void generatePuzzledNumber_oneTime() {
+        model.generatePuzzledNumber();
+        int puzzledNumber = model.getPuzzledNumber();
+
+        Assert.assertTrue(model.checkInBoundaries(puzzledNumber));
     }
 
 
