@@ -31,7 +31,7 @@ public class Model {
     }
 
     public boolean checkInBoundaries(int approachNumber) {
-        return ((BOUND_MIN <= approachNumber) && (approachNumber <= BOUND_MAX));
+        return ((boundMin <= approachNumber) && (approachNumber <= boundMax));
     }
 
     public int getBoundMin() {

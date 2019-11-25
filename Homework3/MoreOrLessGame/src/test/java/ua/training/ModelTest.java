@@ -48,6 +48,16 @@ public class ModelTest {
         Assert.assertFalse(model.checkInBoundaries(100));
     }
 
+    @Test
+    public void checkInBoundaries_1_is_True() {
+        Assert.assertTrue(model.checkInBoundaries(1));
+    }
+
+    @Test
+    public void checkInBoundaries_99_is_True() {
+        Assert.assertTrue(model.checkInBoundaries(99));
+    }
+
 
 
 }
