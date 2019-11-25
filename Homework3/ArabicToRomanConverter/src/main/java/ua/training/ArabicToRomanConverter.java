@@ -3,9 +3,14 @@ package ua.training;
 public class ArabicToRomanConverter {
 
     public String convertArabicToRoman(int arabic) {
-        String roman = "I";
+        StringBuilder roman = new StringBuilder();
 
-        return roman;
+        while (arabic >= 1) {
+            roman.append("I");
+            arabic -= 1;
+        }
+
+        return roman.toString();
     }
 
 }
