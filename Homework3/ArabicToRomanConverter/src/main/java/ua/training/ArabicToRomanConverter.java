@@ -4,9 +4,10 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class ArabicToRomanConverter {
+    private static LinkedHashMap<Integer, String> arabicRomanMap;
 
-    public String convertArabicToRoman(int arabic) {
-        LinkedHashMap<Integer, String> arabicRomanMap = new LinkedHashMap<Integer, String>();
+    public ArabicToRomanConverter() {
+        arabicRomanMap = new LinkedHashMap<>();
         arabicRomanMap.put(1000, "M");
         arabicRomanMap.put(900, "CM");
         arabicRomanMap.put(500, "D");
@@ -20,7 +21,9 @@ public class ArabicToRomanConverter {
         arabicRomanMap.put(5, "V");
         arabicRomanMap.put(4, "IV");
         arabicRomanMap.put(1, "I");
+    }
 
+    public String convertArabicToRoman(int arabic) {
         StringBuilder roman = new StringBuilder();
 
         for(Map.Entry<Integer, String> arabicRomanEntry: arabicRomanMap.entrySet()) {

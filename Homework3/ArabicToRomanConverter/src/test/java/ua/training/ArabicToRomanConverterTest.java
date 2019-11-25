@@ -83,8 +83,13 @@ public class ArabicToRomanConverterTest {
     }
 
     @Test
-    public void convertArabicToRoman_arabic15_romanXV() {
-        Assert.assertEquals("XV", arabicToRomanConverter.convertArabicToRoman(15));
+    public void convertArabicToRoman_arabic2499_romanMMCDXCIX() {
+        Assert.assertEquals("MMCDXCIX", arabicToRomanConverter.convertArabicToRoman(2499));
+    }
+
+    @Test
+    public void convertArabicToRoman_arabic3949_romanMMMCMXLIX() {
+        Assert.assertEquals("MMMCMXLIX", arabicToRomanConverter.convertArabicToRoman(3949));
     }
 
 }
