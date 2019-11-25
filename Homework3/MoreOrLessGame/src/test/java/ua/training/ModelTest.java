@@ -28,5 +28,26 @@ public class ModelTest {
         Assert.assertTrue(model.checkInBoundaries(25));
     }
 
+    @Test
+    public void checkInBoundaries_125_is_False() {
+        Assert.assertFalse(model.checkInBoundaries(125));
+    }
+
+    @Test
+    public void checkInBoundaries_minus125_is_False() {
+        Assert.assertFalse(model.checkInBoundaries(-125));
+    }
+
+    @Test
+    public void checkInBoundaries_0_is_False() {
+        Assert.assertFalse(model.checkInBoundaries(0));
+    }
+
+    @Test
+    public void checkInBoundaries_100_is_False() {
+        Assert.assertFalse(model.checkInBoundaries(100));
+    }
+
+
 
 }
