@@ -23,7 +23,8 @@ public class Model {
     }
 
     public void generatePuzzledNumber() {
-        puzzledNumber = 0;
+        Random rand = new Random();
+        puzzledNumber = boundMin + rand.nextInt(boundMax - boundMin) + 1;
     }
 
     public int getPuzzledNumber() {
