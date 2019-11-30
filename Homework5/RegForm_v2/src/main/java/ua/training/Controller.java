@@ -31,7 +31,7 @@ public class Controller {
 
     // Interaction
     public void processUserInput() {
-        this.view.printMessage(TextConstants.GREETING);
+        this.view.printMessage(view.bundle.getString(TextConstants.GREETING));
         
         NoteBookRecord noteBookRecord = new NoteBookRecord();
         
@@ -47,7 +47,7 @@ public class Controller {
 
             this.model.setNoteBookEntity(noteBookEntity);
         } else {
-            view.printMessage(TextConstants.SOMETHING_IS_NOT_VALID);
+            view.printMessage(view.bundle.getString(TextConstants.SOMETHING_IS_NOT_VALID));
         }
     }
 
@@ -89,11 +89,11 @@ public class Controller {
 
         String requiredSign = "";
         if(((NoteBookRecordFieldString) aFieldInstance).required) {
-            requiredSign = TextConstants.REQUIRED_SIGN;
+            requiredSign = view.bundle.getString(TextConstants.REQUIRED_SIGN);
         }
 
         String[] strParams = new String[] {nextField.getName(), ((NoteBookRecordFieldString) aFieldInstance).regex, requiredSign};
-        this.view.printMessage(TextConstants.PROMPT_FIELD, strParams);
+        this.view.printMessage(view.bundle.getString(TextConstants.PROMPT_FIELD), strParams);
 
         if(!nextField.isAccessible()) {
             nextField.setAccessible(true);
@@ -108,7 +108,7 @@ public class Controller {
 
     private void inputNoteBookGroupsEnum(NoteBookRecord aRecord, Field nextField) {
         //(!) consider always required
-        String requiredSign = TextConstants.REQUIRED_SIGN;
+        String requiredSign = view.bundle.getString(TextConstants.REQUIRED_SIGN);
 
         StringJoiner sjENUMS = new StringJoiner(", ", "[", "]");
         for(NoteBookGroupsEnum anENUM : NoteBookGroupsEnum.values()) {
@@ -116,7 +116,7 @@ public class Controller {
         }
 
         String[] strParams = new String[] {nextField.getName(), sjENUMS.toString(), requiredSign};
-        this.view.printMessage(TextConstants.PROMPT_ENUM_FIELD, strParams);
+        this.view.printMessage(view.bundle.getString(TextConstants.PROMPT_ENUM_FIELD), strParams);
 
         if(!nextField.isAccessible()) {
             nextField.setAccessible(true);

@@ -5,10 +5,10 @@ import java.time.LocalDate;
 
 public class NoteBookRecord extends NoteBookRecordFieldValidator {
 	//TODO make regexes more strict, now it's first approach
-
-	public NoteBookRecordFieldString lastName = new NoteBookRecordFieldString("[A-Za-z]{1,20}", true, false);
-	public NoteBookRecordFieldString firstName = new NoteBookRecordFieldString("[A-Za-z]{1,20}", true, false);
-	public NoteBookRecordFieldString middleName = new NoteBookRecordFieldString("[A-Za-z]{1,20}", true, false);
+	
+	public NoteBookRecordFieldString lastName = new NoteBookRecordFieldString(View.bundle.getString("regex.string.NAMES"), true, false);
+	public NoteBookRecordFieldString firstName = new NoteBookRecordFieldString(View.bundle.getString("regex.string.NAMES"), true, false);
+	public NoteBookRecordFieldString middleName = new NoteBookRecordFieldString(View.bundle.getString("regex.string.NAMES"), true, false);
 	public NoteBookRecordFieldString fullName = new NoteBookRecordFieldString("", true, true);
 	public NoteBookRecordFieldString nickname = new NoteBookRecordFieldString("[A-Za-z0-9]{1,20}", true, false);
 	public NoteBookRecordFieldString comment = new NoteBookRecordFieldString("", true, false);
